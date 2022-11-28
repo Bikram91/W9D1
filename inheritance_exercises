@@ -1,0 +1,29 @@
+Function.prototype.inherits = function(Parent) { 
+    function Surrogate() {};
+    Surrogate.prototype = Parent.prototype;
+    this.prototype = new Surrogate();
+    this.prototype.constructor = this;
+}
+
+
+function MovingObject(name, speed) {
+    this.name = name;
+    this.speed = speed;
+
+   
+
+ }
+
+
+
+ function Ship() { 
+
+
+}
+Ship.inherits(MovingObject);
+
+function Asteroid() {
+
+
+ }
+Asteroid.inherits(MovingObject);
